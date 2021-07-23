@@ -1,0 +1,66 @@
+2021-04-23 02:42:07,603 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-23 02:42:09,073 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 4208 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-23 02:42:09,073 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-23 02:42:09,074 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-23 02:42:18,577 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.768 seconds (JVM running for 12.178)
+2021-04-23 02:42:18,579 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-23 03:23:19,545 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-23 03:23:20,640 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 21392 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-23 03:23:20,640 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-23 03:23:20,643 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-23 03:23:30,554 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.791 seconds (JVM running for 12.164)
+2021-04-23 03:23:30,557 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-23 03:47:48,461 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-23 03:47:49,564 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 21084 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-23 03:47:49,564 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-23 03:47:49,586 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-23 03:47:59,184 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.53 seconds (JVM running for 11.869)
+2021-04-23 03:47:59,186 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-23 03:54:39,512 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-23 03:54:40,745 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 14212 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-23 03:54:40,745 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-23 03:54:40,747 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-23 03:54:50,630 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.816 seconds (JVM running for 12.371)
+2021-04-23 03:54:50,633 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-23 03:57:36,514 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-23 03:57:37,690 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 2280 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-23 03:57:37,690 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-23 03:57:37,691 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-23 03:57:47,257 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.545 seconds (JVM running for 12.04)
+2021-04-23 03:57:47,259 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-23 04:04:55,098 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-23 04:04:56,467 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 1352 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-23 04:04:56,467 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-23 04:04:56,469 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-23 04:05:10,349 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 15.023 seconds (JVM running for 16.6)
+2021-04-23 04:05:10,352 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-23 04:08:32,143 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-23 04:08:33,344 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 21588 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-23 04:08:33,344 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-23 04:08:33,345 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-23 04:08:43,384 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 11.04 seconds (JVM running for 12.469)
+2021-04-23 04:08:43,387 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-23 04:15:34,474 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-23 04:15:35,603 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 15036 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-23 04:15:35,603 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-23 04:15:35,604 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-23 04:15:46,407 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 11.74 seconds (JVM running for 13.172)
+2021-04-23 04:15:46,410 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-23 04:16:56,615 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-23 04:16:57,652 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 13096 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-23 04:16:57,652 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-23 04:16:57,653 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-23 04:17:07,188 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.37 seconds (JVM running for 11.741)
+2021-04-23 04:17:07,190 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-23 04:18:14,517 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-23 04:18:16,104 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 22164 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-23 04:18:16,104 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-23 04:18:16,105 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-23 04:18:26,913 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 12.107 seconds (JVM running for 14.06)
+2021-04-23 04:18:26,916 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-23 04:19:48,746 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-23 04:19:50,281 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 21968 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-23 04:19:50,281 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-23 04:19:50,282 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-23 04:20:01,014 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 11.846 seconds (JVM running for 14.451)
+2021-04-23 04:20:01,017 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************

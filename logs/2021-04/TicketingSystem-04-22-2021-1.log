@@ -1,0 +1,654 @@
+2021-04-22 00:02:28,120 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:02:29,281 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 2724 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:02:29,281 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:02:29,286 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:02:34,335 ERROR o.s.b.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.CourseDetails column: ticketid (should be mapped with insert="false" update="false")
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083) ~[spring-context-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853) ~[spring-context-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) ~[spring-context-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at com.grophin.courseapis.CourseSystem.main(TicketingSystem.java:19) [classes/:?]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.CourseDetails column: ticketid (should be mapped with insert="false" update="false")
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	... 16 more
+Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.CourseDetails column: ticketid (should be mapped with insert="false" update="false")
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:862) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.PersistentClass.checkPropertyColumnDuplication(PersistentClass.java:880) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:902) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:634) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:267) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:347) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:466) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	... 16 more
+2021-04-22 00:02:34,341 INFO c.g.t.TicketingSystem [main] Exception while starting the ticketing System service
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.CourseDetails column: ticketid (should be mapped with insert="false" update="false")
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.grophin.courseapis.CourseSystem.main(TicketingSystem.java:19)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.CourseDetails column: ticketid (should be mapped with insert="false" update="false")
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	... 16 more
+Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.CourseDetails column: ticketid (should be mapped with insert="false" update="false")
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:862)
+	at org.hibernate.mapping.PersistentClass.checkPropertyColumnDuplication(PersistentClass.java:880)
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:902)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:634)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:267)
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:347)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:466)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	... 20 more
+
+2021-04-22 00:03:07,375 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:03:08,318 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 45296 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:03:08,318 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:03:08,319 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:03:13,114 ERROR o.s.b.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.AssignedAgent column: agentid (should be mapped with insert="false" update="false")
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083) ~[spring-context-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853) ~[spring-context-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) ~[spring-context-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at com.grophin.courseapis.CourseSystem.main(TicketingSystem.java:19) [classes/:?]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.AssignedAgent column: agentid (should be mapped with insert="false" update="false")
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	... 16 more
+Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.AssignedAgent column: agentid (should be mapped with insert="false" update="false")
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:862) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.PersistentClass.checkPropertyColumnDuplication(PersistentClass.java:880) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:902) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:634) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:267) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:347) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:466) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	... 16 more
+2021-04-22 00:03:13,119 INFO c.g.t.TicketingSystem [main] Exception while starting the ticketing System service
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.AssignedAgent column: agentid (should be mapped with insert="false" update="false")
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.grophin.courseapis.CourseSystem.main(TicketingSystem.java:19)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.AssignedAgent column: agentid (should be mapped with insert="false" update="false")
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	... 16 more
+Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.AssignedAgent column: agentid (should be mapped with insert="false" update="false")
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:862)
+	at org.hibernate.mapping.PersistentClass.checkPropertyColumnDuplication(PersistentClass.java:880)
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:902)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:634)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:267)
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:347)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:466)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	... 20 more
+
+2021-04-22 00:03:41,820 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:03:42,916 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 28804 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:03:42,916 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:03:42,917 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:03:49,919 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 7.87 seconds (JVM running for 9.217)
+2021-04-22 00:03:49,921 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 00:04:07,089 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:04:08,084 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 42512 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:04:08,089 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:04:08,090 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:04:15,466 ERROR o.s.b.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.CourseDetails column: ticketid (should be mapped with insert="false" update="false")
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083) ~[spring-context-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853) ~[spring-context-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) ~[spring-context-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at com.grophin.courseapis.CourseSystem.main(TicketingSystem.java:19) [classes/:?]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.CourseDetails column: ticketid (should be mapped with insert="false" update="false")
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	... 16 more
+Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.CourseDetails column: ticketid (should be mapped with insert="false" update="false")
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:862) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.PersistentClass.checkPropertyColumnDuplication(PersistentClass.java:880) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:902) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:634) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:267) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:347) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:466) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	... 16 more
+2021-04-22 00:04:15,471 INFO c.g.t.TicketingSystem [main] Exception while starting the ticketing System service
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.CourseDetails column: ticketid (should be mapped with insert="false" update="false")
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.grophin.courseapis.CourseSystem.main(TicketingSystem.java:19)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.CourseDetails column: ticketid (should be mapped with insert="false" update="false")
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	... 16 more
+Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: com.grophin.courseapis.models.CourseDetails column: ticketid (should be mapped with insert="false" update="false")
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:862)
+	at org.hibernate.mapping.PersistentClass.checkPropertyColumnDuplication(PersistentClass.java:880)
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:902)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:634)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:267)
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:347)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:466)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	... 20 more
+
+2021-04-22 00:04:25,747 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:04:26,653 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 47832 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:04:26,654 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:04:26,655 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:04:33,845 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 7.906 seconds (JVM running for 9.214)
+2021-04-22 00:04:33,847 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 00:05:24,384 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:05:25,948 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 27208 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:05:25,948 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:05:25,949 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:05:34,636 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 9.912 seconds (JVM running for 11.523)
+2021-04-22 00:05:34,638 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 00:06:36,577 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:06:37,508 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 44712 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:06:37,508 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:06:37,509 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:06:46,547 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 9.766 seconds (JVM running for 11.067)
+2021-04-22 00:06:46,550 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 00:08:02,594 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8881-exec-5] Referential integrity constraint violation: "FKPX30RU2L1W6MJD7MU31YMFT0V: PUBLIC.TICKET_DETAILS FOREIGN KEY(TICKETID) REFERENCES PUBLIC.TICKET_STATUS(TICKETID)"; SQL statement:
+insert into ticket_details (create_user, customer, description, priority, title, type, ticketid) values (?, ?, ?, ?, ?, ?, ?) [23002-148]
+2021-04-22 00:08:02,602 ERROR o.h.i.ExceptionMapperStandardImpl [http-nio-8881-exec-5] HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2021-04-22 00:19:20,299 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:19:21,281 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 33380 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:19:21,281 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:19:21,282 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:19:30,431 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 9.916 seconds (JVM running for 11.263)
+2021-04-22 00:19:30,434 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 00:23:58,939 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:23:59,953 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 6260 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:23:59,953 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:23:59,954 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:24:10,273 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 11.09 seconds (JVM running for 12.444)
+2021-04-22 00:24:10,276 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 00:27:24,377 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:27:25,388 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 47852 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:27:25,389 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:27:25,390 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:27:34,667 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.092 seconds (JVM running for 11.39)
+2021-04-22 00:27:34,670 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 00:28:36,470 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:28:37,728 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 44516 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:28:37,728 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:28:37,729 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:28:47,510 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.835 seconds (JVM running for 12.23)
+2021-04-22 00:28:47,512 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 00:29:53,631 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:29:54,854 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 39840 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:29:54,854 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:29:54,855 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:30:04,108 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.283 seconds (JVM running for 11.68)
+2021-04-22 00:30:04,110 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 00:32:17,677 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:32:18,759 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 3904 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:32:18,759 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:32:18,760 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:32:28,872 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.978 seconds (JVM running for 12.349)
+2021-04-22 00:32:28,875 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 00:33:59,957 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:34:00,980 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 13784 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:34:00,980 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:34:00,981 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:34:10,503 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.293 seconds (JVM running for 11.702)
+2021-04-22 00:34:10,505 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 00:34:53,811 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:34:54,923 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 2468 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:34:54,923 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:34:54,925 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:35:04,239 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.209 seconds (JVM running for 11.529)
+2021-04-22 00:35:04,241 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 00:42:06,655 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:42:07,664 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 30700 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:42:07,665 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:42:07,666 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:42:17,029 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.174 seconds (JVM running for 11.515)
+2021-04-22 00:42:17,032 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 00:42:28,523 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8881-exec-2] Referential integrity constraint violation: "FKPQ05DMEUAOKRJ5ATMN4XSCAQ: PUBLIC.TICKET_DETAILS FOREIGN KEY(CREATE_USER) REFERENCES PUBLIC.USER_DETAILS(USER_NAME)"; SQL statement:
+insert into ticket_details (create_user, customer, description, priority, title, type, ticketid) values (?, ?, ?, ?, ?, ?, ?) [23002-148]
+2021-04-22 00:42:28,526 ERROR o.h.i.ExceptionMapperStandardImpl [http-nio-8881-exec-2] HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2021-04-22 00:46:00,390 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 00:46:01,529 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 37456 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 00:46:01,529 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 00:46:01,529 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 00:46:10,503 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 9.88 seconds (JVM running for 11.313)
+2021-04-22 00:46:10,505 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 00:46:49,840 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8881-exec-3] Unique index or primary key violation: "UK_7PQJKT6MWIGEM3TVE6E8J2QLP_INDEX_3 ON PUBLIC.USER_DETAILS(USER_NAME)"; SQL statement:
+insert into user_details (user_address, user_contact_no, user_name, user_email, userid) values (?, ?, ?, ?, ?) [23001-148]
+2021-04-22 00:46:49,843 ERROR o.h.i.ExceptionMapperStandardImpl [http-nio-8881-exec-3] HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2021-04-22 01:02:52,620 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 01:02:53,510 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 43704 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 01:02:53,510 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 01:02:53,511 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 01:03:02,770 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 9.951 seconds (JVM running for 11.288)
+2021-04-22 01:03:02,773 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 01:11:11,242 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 01:11:12,244 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 13168 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 01:11:12,244 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 01:11:12,245 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 01:11:21,513 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.055 seconds (JVM running for 11.417)
+2021-04-22 01:11:21,516 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 01:49:12,629 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 01:49:13,667 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 14232 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 01:49:13,667 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 01:49:13,668 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 01:49:24,530 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 11.7 seconds (JVM running for 13.073)
+2021-04-22 01:49:24,533 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 01:50:35,366 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 01:50:36,380 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 48604 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 01:50:36,380 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 01:50:36,382 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 01:50:45,990 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.427 seconds (JVM running for 11.758)
+2021-04-22 01:50:45,993 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 01:53:52,937 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8881-exec-2] Referential integrity constraint violation: "FKPQ05DMEUAOKRJ5ATMN4XSCAQ: PUBLIC.TICKET_DETAILS FOREIGN KEY(CREATE_USER) REFERENCES PUBLIC.USER_DETAILS(USER_NAME)"; SQL statement:
+insert into ticket_details (create_user, customer, description, priority, title, type, ticketid) values (?, ?, ?, ?, ?, ?, ?) [23002-148]
+2021-04-22 01:53:52,939 ERROR o.h.i.ExceptionMapperStandardImpl [http-nio-8881-exec-2] HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2021-04-22 01:54:13,887 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8881-exec-4] Referential integrity constraint violation: "FKPQ05DMEUAOKRJ5ATMN4XSCAQ: PUBLIC.TICKET_DETAILS FOREIGN KEY(CREATE_USER) REFERENCES PUBLIC.USER_DETAILS(USER_NAME)"; SQL statement:
+insert into ticket_details (create_user, customer, description, priority, title, type, ticketid) values (?, ?, ?, ?, ?, ?, ?) [23002-148]
+2021-04-22 01:54:13,887 ERROR o.h.i.ExceptionMapperStandardImpl [http-nio-8881-exec-4] HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2021-04-22 02:00:11,753 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 02:00:12,807 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 36132 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 02:00:12,807 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 02:00:12,808 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 02:00:23,140 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 11.094 seconds (JVM running for 12.746)
+2021-04-22 02:00:23,141 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 02:00:57,561 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8881-exec-6] Data conversion error converting "'abc' (CUSTOMER INTEGER)"; SQL statement:
+insert into ticket_details (create_user, customer, description, priority, title, type, ticketid) values (?, ?, ?, ?, ?, ?, ?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7) [90021-148]
+2021-04-22 02:00:57,564 ERROR o.h.i.ExceptionMapperStandardImpl [http-nio-8881-exec-6] HHH000346: Error during managed flush [org.hibernate.exception.GenericJDBCException: could not execute statement]
+2021-04-22 02:01:50,235 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 02:01:51,367 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 38680 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 02:01:51,368 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 02:01:51,370 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 02:02:00,987 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.554 seconds (JVM running for 11.947)
+2021-04-22 02:02:00,990 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 02:02:46,793 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 02:02:47,784 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 21792 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 02:02:47,784 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 02:02:47,785 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 02:02:57,299 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.313 seconds (JVM running for 11.649)
+2021-04-22 02:02:57,302 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 04:30:37,677 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 04:30:38,828 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 10332 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 04:30:38,828 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 04:30:38,829 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 04:30:48,130 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.235 seconds (JVM running for 12.049)
+2021-04-22 04:30:48,133 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 12:02:33,608 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 12:02:34,867 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 14140 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 12:02:34,868 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 12:02:34,869 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 12:02:45,160 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 11.194 seconds (JVM running for 14.081)
+2021-04-22 12:16:43,373 INFO c.g.t.TicketingSystem [main] Exception while starting the ticketing System service
+java.net.UnknownHostException: api.sendgrid.com
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at com.sendgrid.Client.executeApiCall(Client.java:364)
+	at com.sendgrid.Client.post(Client.java:236)
+	at com.sendgrid.Client.api(Client.java:394)
+	at com.sendgrid.BaseInterface.makeCall(BaseInterface.java:253)
+	at com.sendgrid.BaseInterface.api(BaseInterface.java:275)
+	at com.grophin.courseapis.CourseSystem.main(TicketingSystem.java:40)
+
+2021-04-22 21:09:03,528 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 21:09:04,625 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 6632 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 21:09:04,625 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 21:09:04,627 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 21:09:15,338 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field emailInterface in com.grophin.courseapis.controller.EmailController required a bean of type 'com.grophin.courseapis.services.EmailInterface' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.grophin.courseapis.services.EmailInterface' in your configuration.
+
+2021-04-22 21:09:15,341 INFO c.g.t.TicketingSystem [main] Exception while starting the ticketing System service
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'emailController': Unsatisfied dependency expressed through field 'emailInterface'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.grophin.courseapis.services.EmailInterface' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.grophin.courseapis.CourseSystem.main(TicketingSystem.java:27)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.grophin.courseapis.services.EmailInterface' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1644)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1164)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 19 more
+
+2021-04-22 21:09:39,199 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 21:09:40,328 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 8696 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 21:09:40,328 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 21:09:40,329 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 21:09:47,464 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 8.05 seconds (JVM running for 9.439)
+2021-04-22 21:09:47,467 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 21:29:40,767 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 21:29:42,017 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 21208 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 21:29:42,018 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 21:29:42,030 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 21:29:51,677 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.71 seconds (JVM running for 12.311)
+2021-04-22 21:29:51,680 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 21:54:45,717 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 21:54:46,723 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 17092 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 21:54:46,723 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 21:54:46,724 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 21:54:56,260 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.319 seconds (JVM running for 11.736)
+2021-04-22 21:54:56,262 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 22:22:36,094 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8881-exec-1] Referential integrity constraint violation: "FKPQ05DMEUAOKRJ5ATMN4XSCAQ: PUBLIC.TICKET_DETAILS FOREIGN KEY(CREATE_USER) REFERENCES PUBLIC.USER_DETAILS(USER_NAME)"; SQL statement:
+insert into ticket_details (create_user, customer, deadline, description, priority, title, type, ticketid) values (?, ?, ?, ?, ?, ?, ?, ?) [23002-148]
+2021-04-22 22:22:36,097 ERROR o.h.i.ExceptionMapperStandardImpl [http-nio-8881-exec-1] HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2021-04-22 23:03:34,683 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 23:03:35,669 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 22212 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 23:03:35,669 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 23:03:35,670 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 23:03:45,485 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.596 seconds (JVM running for 12.012)
+2021-04-22 23:03:45,489 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 23:06:29,294 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 23:06:31,685 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 2136 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 23:06:31,685 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 23:06:31,686 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 23:06:42,984 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 13.405 seconds (JVM running for 15.326)
+2021-04-22 23:06:42,987 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 23:07:04,942 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 23:07:06,240 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 18440 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 23:07:06,241 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 23:07:06,241 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 23:07:18,230 ERROR o.s.b.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083) ~[spring-context-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853) ~[spring-context-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) ~[spring-context-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at com.grophin.courseapis.CourseSystem.main(TicketingSystem.java:27) [classes/:?]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:904) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:935) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	... 16 more
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:904) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:935) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741) ~[spring-beans-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	... 16 more
+2021-04-22 23:07:18,244 INFO c.g.t.TicketingSystem [main] Exception while starting the ticketing System service
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.grophin.courseapis.CourseSystem.main(TicketingSystem.java:27)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:904)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:935)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741)
+	... 16 more
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 33 more
+
+2021-04-22 23:07:27,427 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 23:07:28,544 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 13820 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 23:07:28,545 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 23:07:28,546 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 23:07:37,754 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.14 seconds (JVM running for 11.5)
+2021-04-22 23:07:37,757 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************
+2021-04-22 23:10:53,678 INFO c.g.t.TicketingSystem [main] ************************ Starting the Ticketing System Service ************************
+2021-04-22 23:10:54,716 INFO c.g.t.TicketingSystem [main] Starting TicketingSystem on WIN10H-R83J726B with PID 19728 (C:\MyProjects\TicketingSystem\out\production\classes started by sadil in C:\MyProjects\TicketingSystem)
+2021-04-22 23:10:54,716 DEBUG c.g.t.TicketingSystem [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2021-04-22 23:10:54,717 INFO c.g.t.TicketingSystem [main] No active profile set, falling back to default profiles: default
+2021-04-22 23:11:04,276 INFO c.g.t.TicketingSystem [main] Started TicketingSystem in 10.294 seconds (JVM running for 11.771)
+2021-04-22 23:11:04,279 INFO c.g.t.TicketingSystem [main] ************************ Started the Ticketing System Service ************************

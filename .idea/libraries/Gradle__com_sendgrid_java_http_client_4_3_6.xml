@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.sendgrid:java-http-client:4.3.6">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sendgrid/java-http-client/4.3.6/37a871ff75d0cb8178b8731339ca4cfdf9b7fdc/java-http-client-4.3.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sendgrid/java-http-client/4.3.6/4a2fbb67a84e20e54aa3f170ed4f5c43cd3ed113/java-http-client-4.3.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
